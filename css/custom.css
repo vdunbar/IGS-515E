@@ -11,3 +11,23 @@
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
 	text-transform: none;
 }
+
+.medImg img {
+	width: 75%;
+}
+
+.smImg img {
+	width: 50%;
+}
+
+table {
+	font-size: 75%;
+}
+
+.left {
+	text-align: left;
+}
+
+.noShadow img {
+	box-shadow: 0 0 0 0 !important;
+}
