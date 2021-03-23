@@ -25,10 +25,10 @@
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
 	</head>
@@ -37,7 +37,7 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section>
+				<section data-background="#e6f7ff">
 					<h2>Text analysis: tools & approaches</h2>
 					<h4>Advanced Qualitative Methods, Mar 23, 2021</h4>
 					<br />
@@ -49,9 +49,9 @@
 					<h3>Learning objectives</h3>
 					<br/>
 					<ol>
-						<li class="fragment">Identify common text analysis techniques</li>
-						<li class="fragment">Understand sources of bias in automated analysis</li>
-						<li class="fragment">Use NVivo software for text coding and queries</li>
+						<li>Identify common text analysis techniques</li>
+						<li>Understand sources of bias in automated analysis</li>
+						<li>Use NVivo software for text coding and queries</li>
 					</ol>
 				</section>
 
@@ -95,219 +95,257 @@
 					</table>
 				</section>
 
-				<section data-auto-animate>
+				<section data-transition="slide-in none-out" data-background="#5a82aa">
 					<h3>Initial questions</h3>
 					<ul>
-						<p class="fragment" data-id="firstq">What is your dataset?</p>
-						<p class="fragment">What is your objective?</p>
-						<p class="fragment">Manual or automated processes?</p>
+						<p>What is your dataset?</p>
+						<p>What is your objective?</p>
+						<p>Manual or automated processes?</p>
 					</ul>
-					</section>
+				</section>
 
-					<section data-auto-animate>
-						<h3 data-id="firstq">What is your <b>dataset</b>?</h3>
-						<ul class="fragment">
-							<li>size/extent</li>
-							<li>format</li>
-							<li>privacy/sensitivity</li>
-						</ul>
-					</section>
+				<section>
+					<h3>What is your dataset?</h3>
+					<ul class="fragment">
+						<li>size/extent</li>
+						<li>format</li>
+						<li>privacy/sensitivity</li>
+					</ul>
+				</section>
 
+				<section>
+					<h3>What is your <b>objective</b>?</h3>
+					<ul class="fragment">
+						<li>research questions</li>
+						<li>type of analysis</li>
+						<li>expected output</li>
+					</ul>
+				</section>
 
-					<section> 
-						<h3>What is your <b>objective</b>?</h3>
-						<ul class="fragment">
-							<li>research questions</li>
-							<li>type of analysis</li>
-							<li>expected output</li>
-						</ul>
-					</section>
+				<section>
+					<h3>Manual or automated processing?</h3>
+					<ul class="fragment"> 
+						<p><b>automated:</b> machine learning, algorithms</p>
+						<p><b>manual:</b> computer-<em>assisted</em>, but more directly involved</p>
+					</ul>
+				</section>
 
-					<section> 
-						<h3>Manual or automated processing?</h3>
-						<ul> 
-							<p class="fragment"><b>automated:</b> machine learning, algorithms</p>
-							<p class="fragment"><b>manual:</b> computer-<em>assisted</em>, but more directly involved</p>
-						</ul>
-					</section>
+				<section data-transition="slide-in none-out" data-background="#5a82aa">
+					<h3>Text analysis techniques</h3>
+					<ul>
+						<li>Word frequency</li>
+						<li>Collocation</li>
+						<li>Concordance</li>
+						<li>Text extraction</li>
+						<li>Text classification</li>
+					</ul>
 
-					<section>
-						<h3>Text analysis techniques</h3>
-							<ul>
-								<li>Word frequency</li>
-								<li>Collocation</li>
-								<li>Concordance</li>
-								<li>Text classification</li>
-								<li>Text extraction</li>
+					<aside class="notes">
+						Link with some info at https://medium.com/@aishwaryaprasad.ca/basic-methods-of-text-analysis-cb4992e0c952, for concordance, collocation, word frequency. Additional info (for text analysis and text extraction) at https://medium.com/@aishwaryaprasad.ca/advanced-techniques-used-in-text-analysis-653472628b78.
+					</aside>
+				</section>
+
+				<section data-background="#e6f7ff" data-auto-animate>
+					<h3>Word frequency</h3>
+					<img style="width: 40%"  src="images/word-frequency.png"/>
+				</section>
+				<section data-background="#e6f7ff" data-auto-animate>
+					<h3>Word frequency <em> with stemming</em></h3>
+					<img style="width: 70%" src="images/word-frequency-stemmed.png"/>
+				</section>
+
+				<section data-background="#e6f7ff">
+					<h3>Collocation</h3>
+					<div style="padding:10px; background-color:white"> 
+						<p style="margin-bottom:50px;font-size:0.8em">...there's some concern that <b><em>development happen in a way that still protects the environment water quality. Hopefully development</em></b> is gonna start to become...<br/></p>
+						<p style="font-size:0.8em">...one of the highest producing <b><em>water bodies in North Carolina is because there isn't that much development</em></b>. And so you know, I...</p></div>
+				</section>
+
+				<section data-background="#e6f7ff">
+					<h3>Concordance</h3>
+					<img src="images/fisheries.png"/>
+				</section>
+
+				<section data-background="#e6f7ff">
+					<h3>Text extraction</h3>
+					<ul>
+						<li>Keywords</li>
+						<li>Named entities
+							<ul style="font-size:0.8em">
+								<li>people</li>
+								<li>places</li>
+								<li>organizations</li>
+								<li>...</li>
 							</ul>
+						</li>
+					</ul>
+				</section>
 
-						<aside class="notes">
-							Link with some info at https://medium.com/@aishwaryaprasad.ca/basic-methods-of-text-analysis-cb4992e0c952, for concordance, collocation, word frequency. Additional info (for text analysis and text extraction) at https://medium.com/@aishwaryaprasad.ca/advanced-techniques-used-in-text-analysis-653472628b78.
-						</aside>
-					</section>
+				<section data-background="#e6f7ff">
+					<h3>Text classification</h3>
+					<ul>
+						<li>Sentiment</li>
+						<li>Action</li>
+						<li>Activity</li>
+						<li>Belief</li>
+						<li>Emotion</li>
+						<li>Issues</li>
+						<li>...</li>
+					</ul>
+				</section>
 
-					<section>
-						<h3>Word frequency</h3>
-					</section>
-					
-					<section>
-						<h3>Collocation</h3>
-					</section>
+				<section>
+					<h2>Creatures of Classification</h2>
+				</section>
 
-					<section>
-						<h3>Concordance</h3>
-					</section>
+				<section>
+					<h3>Implications of classifications</h3>
+					<p class = "noShadow medImg"><img src="images\flax.png" referrerpolicy="no-referrer"></p>
+				</section>
 
-					<section>
-						<h3>Text classification</h3>
-						<p>Sentiment analysis, topic analysis</p>
-					</section>
+				<section>
+					<h3>Genetic lineage</h3>
+					<p class="smImg"><img src="images/clade.png" referrerpolicy="no-referrer"></p>
+				</section>
 
-					<section>
-						<h3>Text extraction</h3>
-						<p>Keyword extraction, named entity recognition</p>
-					</section>
+				<section>
+					<h3>Harakeke</h3>
+					<p class="medImg"><img src="images/four.png" referrerpolicy="no-referrer"></p>
+				</section>
 
-					<section>
-						<h2>Creatures of Classification</h2>
-					</section>
+				<section>
+					<h3>Horticulture</h3>
+					<p class = "noShadow medImg"><img src="images/horticulture.png" referrerpolicy="no-referrer"></p>
+				</section>
 
-					<section>
-						<h3>Implications of classifications</h3>
-						<p class = "noShadow medImg"><img src="images\flax.png" referrerpolicy="no-referrer"></p>
-					</section>
-
-					    <section>
-						<h3>Genetic lineage</h3>
-						<p class="smImg"><img src="images/clade.png" referrerpolicy="no-referrer"></p>
-					    </section>
-
-					    <section>
-						<h3>Harakeke</h3>
-						<p class="medImg"><img src="images/four.png" referrerpolicy="no-referrer"></p>
-					    </section>
-
-					    <section>
-						<h3>Horticulture</h3>
-						<p class = "noShadow medImg"><img src="images/horticulture.png" referrerpolicy="no-referrer"></p>
-					    </section>
-
-					    <section>
-						<h3>Questions</h3>
-						<ul>
+				<section>
+					<h3>Questions</h3>
+					<ul>
 						<li>Context of creation</li>
 						<li>Human identified patterns</li>
 						<li>Machine identified patterns</li>
 						<li>Degree of intervention</li>
-						</ul>
-					    </section>
+					</ul>
+				</section>
 
-					    <section>
-						<h2>Natural Language Processing Toolkits</h2>
-						<p>Functions, lexicons, and algorithms.</p>
-					    </section>
+				<section>
+					<h2>Natural Language Processing Toolkits</h2>
+					<p>Functions, lexicons, and algorithms.</p>
+				</section>
 
-					    <section>
-						<h3>Breaking down text</h3>
-					    </section>
+				<section>
+					<h3>Breaking down text</h3>
+				</section>
 
-					    <section>
-						<div class="left">
+				<section>
+					<div class="left">
 						<p>Because I could not stop for Death -,</p>
 						<p>He kindly stopped for me -,</p>
 						<p>The Carriage held but just Ourselves -,</p>
 						<p>and Immortality</p>
-						    </div>
-					    </section>
+					</div>
+				</section>
 
-					    <section>
-						<table>
+				<section>
+					<table>
 						<thead>
-						<tr><th>Line</th><th>Sentence</th></tr></thead>
+							<tr><th>Line</th><th>Sentence</th></tr></thead>
 						<tbody><tr><td>1</td><td>Because I could not stop for Death -</td></tr><tr><td>2</td><td>He kindly stopped for me -</td></tr><tr><td>3</td><td>The Carriage held but just Ourselves -</td></tr><tr><td>4</td><td>and Immortality</td></tr></tbody>
-						</table>
-					    </section>
+					</table>
+				</section>
 
-					    <section>
-						<table>
+				<section>
+					<table>
 						<thead>
-						<tr><th>Line</th><th>Word</th></tr></thead>
+							<tr><th>Line</th><th>Word</th></tr></thead>
 						<tbody><tr><td>1</td><td>because</td></tr><tr><td>1</td><td>i</td></tr><tr><td>1</td><td>could</td></tr><tr><td>1</td><td>not</td></tr><tr><td>1</td><td>stop</td></tr><tr><td>1</td><td>for</td></tr><tr><td>1</td><td>death</td></tr><tr><td>2</td><td>he</td></tr><tr><td>2</td><td>kindly</td></tr><tr><td>2</td><td>stopped</td></tr></tbody>
-						</table>
-					    </section>
+					</table>
+				</section>
 
-					    <section>
-						<h3>Patterns</h3>
-					    </section>
+				<section>
+					<h3>Patterns</h3>
+				</section>
 
-					    <section>
-						<table>
+				<section>
+					<table>
 						<thead>
-						<tr><th>Year</th><th>Candidate</th><th>Won (W) or Lost (L) the Popular Vote</th><th>Number of &#39;will&#39;, &#39;shall&#39;, &#39;going to&#39;</th></tr></thead>
+							<tr><th>Year</th><th>Candidate</th><th>Won (W) or Lost (L) the Popular Vote</th><th>Number of &#39;will&#39;, &#39;shall&#39;, &#39;going to&#39;</th></tr></thead>
 						<tbody><tr><td>1960</td><td>Kennedy</td><td>W</td><td>163</td></tr><tr><td>1960</td><td>Nixon</td><td>L</td><td>122</td></tr><tr><td>1976</td><td>Carter</td><td>W</td><td>68</td></tr><tr><td>1976</td><td>Ford</td><td>L</td><td>32</td></tr><tr><td>1980</td><td>Reagan</td><td>W</td><td>19</td></tr><tr><td>1980</td><td>Carter</td><td>L</td><td>18</td></tr><tr><td>…</td><td>…</td><td>…</td><td>…</td></tr></tbody>
-						</table>
-					    </section>
+					</table>
+				</section>
 
-					    <section>
-						<h3>Complex algorithms</h3>
-						<ul>
+				<section>
+					<h3>Complex algorithms</h3>
+					<ul>
 						<li>Rules of grammar</li>
 						<li>Lexicons of sentiment correlation</li>
 						<li>Document structures or genres</li>
 						<li>Machine detected patterns</li>
-						</ul>
-					    </section>
+					</ul>
+				</section>
 
-					    <section>
-						<h3>The problem</h3>
-					    </section>
+				<section>
+					<h3>The problem</h3>
+				</section>
 
-					    <section>
-						    <p>I have a tear...</p>
-					    </section>
+				<section>
+					<p>I have a tear...</p>
+				</section>
 
-					    <section>
-						    <section>
-							<p>I have a tear...</p>
-							<p>in my pants.</p>
-						    </section>
-						    <section>
-							<p class="small">Hermans, F. (January 25, 2019). <em>Explicit Direct Instruction in Programming Education.</em> [Talk]. <a href="https://rstudio.com/resources/rstudioconf-2019/explicit-direct-instruction-in-programming-education/">https://rstudio.com/resources/rstudioconf-2019/explicit-direct-instruction-in-programming-education/</a></p>
-						    </section>
-					    </section>
+				<section>
+					<section>
+						<p>I have a tear...</p>
+						<p>in my pants.</p>
+					</section>
+					<section>
+						<p class="small">Hermans, F. (January 25, 2019). <em>Explicit Direct Instruction in Programming Education.</em> [Talk]. <a href="https://rstudio.com/resources/rstudioconf-2019/explicit-direct-instruction-in-programming-education/">https://rstudio.com/resources/rstudioconf-2019/explicit-direct-instruction-in-programming-education/</a></p>
+					</section>
+				</section>
 
-					    <section>
-						<h3>The needed outcome</h3>
-					    </section>
+				<section>
+					<h3>The needed outcome</h3>
+				</section>
 
-					    <section>
-						<section>
-						    <div class="left">
+				<section>
+					<section>
+						<div class="left">
 							<p><span style = "color: grey;">Text:</span> ... The thieves stole the paintings. They were subsequently sold. ...</p>
 							<p><span style = "color: grey;">Human:</span> Who or what was sold?</p>
 							<p><span style = "color: grey;">Machine:</span> The paintings.</p>
-						    </div>
-						</section>
-						<section>
-						    <p class = "small">Bird, S., Klein, E., &amp; Loper, E. (2009). <e>Natural Language Processing with Python: Analyzing Text with the Natural Language Toolkit.</e> <a href = "http://www.nltk.org/book/">http://www.nltk.org/book/</a></p>
-						</section>
-					    </section>
+						</div>
+					</section>
+					<section>
+						<p class = "small">Bird, S., Klein, E., &amp; Loper, E. (2009). <e>Natural Language Processing with Python: Analyzing Text with the Natural Language Toolkit.</e> <a href = "http://www.nltk.org/book/">http://www.nltk.org/book/</a></p>
+					</section>
+				</section>
 
-					    <section>
-						<h3>Examples</h3>
-						<ul>
+				<section>
+					<h3>Examples</h3>
+					<ul>
 						<li>NLTK</li>
 						<li>spaCy</li>
 						<li>StanfordCoreNLP</li>
 						<li>CogCompNLP</li>
 						<li>MALLET (MAchine Learning for LanguagE Toolkit)</li>
-						</ul>
-					    </section>
+					</ul>
+				</section>
 
-					<section>
+					<section data-transition="slide" data-background="#e6f7ff">
 						<h3>Hands-on practice with NVivo</h3>
-						<p>For NVivo and QDA resources see <https://ubc-library-rc.github.io/nvivo1/></p>
+						<p>For NVivo and QDA resources see <br/><a href="https://ubc-library-rc.github.io/nvivo1/">https://ubc-library-rc.github.io/nvivo1/</a></p>
+					</section>	 
+
+					<section data-transition="slide"  data-background="#e6f7ff">
+						<h3>NVivo alternatives</h3>
+						<ul>
+							<li><b>ATLAS.ti</b> - similar features, also not free</li>
+							<li><b>Taguette</b> - for tagging/coding only, open source</li>
+						</ul>
 					</section>
+
+				<section data-background="#e6f7ff">
+					<p><em>NVivo demo</em></p>
+				</section>
 
 			</div>
 		</div>
@@ -317,30 +355,30 @@
 
 		<script>
 			(function() {
-							function extend( a, b ) {
-											for(var i in b) {
-															a[i] = b[i];
-														}
-										}
-							var baseOptions = {
-											transition: 'none',
-											hash: true,
-											dependencies: [
-															{ src: 'plugin/markdown/marked.js' },
-															{ src: 'plugin/markdown/markdown.js' },
-															{ src: 'plugin/highlight/highlight.js' },
-															{ src: 'plugin/notes/notes.js', async: true }
-														]
-										};
+				function extend( a, b ) {
+					for(var i in b) {
+						a[i] = b[i];
+					}
+				}
+				var baseOptions = {
+					transition: 'none',
+					hash: true,
+					dependencies: [
+						{ src: 'plugin/markdown/marked.js' },
+						{ src: 'plugin/markdown/markdown.js' },
+						{ src: 'plugin/highlight/highlight.js' },
+						{ src: 'plugin/notes/notes.js', async: true }
+					]
+				};
 
 
 
-							var configOptions = {"controls":true,"progress":true,"history":true,"center":true}
-							var initializeOptions = {};
-							extend(initializeOptions, baseOptions);
-							extend(initializeOptions, configOptions);
-							Reveal.initialize(initializeOptions);
-						})();
+				var configOptions = {"controls":true,"progress":true,"history":true,"center":true}
+				var initializeOptions = {};
+				extend(initializeOptions, baseOptions);
+				extend(initializeOptions, configOptions);
+				Reveal.initialize(initializeOptions);
+			})();
 
 		</script>
 
